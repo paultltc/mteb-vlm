@@ -100,6 +100,12 @@ from mteb.models import (
     voyage_models,
     voyage_v,
     xyz_models,
+    smolvlm_models,
+    vbert_models,
+    colvbert_models,
+    colvllama_models,
+    siglip2_models,
+    colmodernvbert_models,
 )
 
 logger = logging.getLogger(__name__)
@@ -193,6 +199,12 @@ model_modules = [
     colsmol_models,
     geogpt_models,
     mcinext_models,
+    smolvlm_models,
+    vbert_models,
+    colvbert_models,
+    colvllama_models,
+    siglip2_models,
+    colmodernvbert_models,
 ]
 MODEL_REGISTRY = {}
 
