@@ -20,11 +20,14 @@ from tests.test_benchmark.task_grid import MOCK_TASK_TEST_GRID
 
 
 class MockNumpyEncoder(mteb.Encoder):
-    def __init__(self):
-        pass
+    def __init__(self, seed: int | None = None):
+        if seed is not None:
+            self.rng = np.random.default_rng(seed)
+        else:
+            self.rng = np.random.default_rng()
 
     def encode(self, sentences, prompt_name: str | None = None, **kwargs):
-        return np.random.rand(len(sentences), 10)
+        return self.rng.random((len(sentences), 10))
 
 
 class MockTorchEncoder(mteb.Encoder):
@@ -133,6 +136,8 @@ class MockSentenceTransformer(SentenceTransformer):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        # by default, in SentenceTransformer, prompts are `{"query": "", "document": ""}`
+        self.prompts = {}
 
     def encode(
         self,
