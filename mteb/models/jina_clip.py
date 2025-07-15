@@ -182,3 +182,35 @@ jina_clip_v1 = ModelMeta(
         # Natural Language Inference (NLI) dataset (Bowman et al., 2015)
     },
 )
+
+jina_clip_v2 = ModelMeta(
+    loader=partial(
+        JinaCLIPModelWrapper,
+        model_name="jinaai/jina-clip-v2",
+    ),
+    name="jinaai/jina-clip-v2",
+    languages=["eng-Latn"],
+    revision="344d954da76eb8ad47a7aaff42d012e30c15b8fe",
+    release_date="2024-10-09",
+    modalities=["image", "text"],
+    n_parameters=865_000_000,
+    memory_usage_mb=3000,
+    max_tokens=8192,
+    embed_dim=1024,
+    license="apache-2.0",
+    open_weights=True,
+    public_training_code=None,
+    public_training_data=None,
+    framework=["PyTorch"],
+    reference="https://huggingface.co/jinaai/jina-clip-v2",
+    similarity_fn_name=None,
+    use_instructions=True,
+    training_datasets={
+        # LAION400M
+        # ShareGPT4V
+        "MSMARCO": ["train"],
+        # NQ
+        # HotpotQA
+        # Natural Language Inference (NLI) dataset (Bowman et al., 2015)
+    },
+)
