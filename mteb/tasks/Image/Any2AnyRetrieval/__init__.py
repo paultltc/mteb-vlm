@@ -47,6 +47,8 @@ from .eng.VQA2IT2TRetrieval import *
 from .eng.WebQAT2ITRetrieval import *
 from .eng.WebQAT2TRetrieval import *
 from .multilingual.MIRACLVisionRetrieval import *
+from .eng.NatCapI2TRetrieval import *
+from .eng.NatCapT2IRetrieval import *
 from .multilingual.VdrMultilingualRetrieval import *
 from .multilingual.Vidore2BenchRetrieval import *
 from .multilingual.WITT2IRetrieval import *

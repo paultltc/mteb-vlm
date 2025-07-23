@@ -74,7 +74,7 @@ colvbert_modernvbert_base = ModelMeta(
     loader=partial(
         ColModernVBertWrapper,
         model_name="SmolVEncoder/colvbert-modernbert_base-vidore",
-        torch_dtype=torch.float32,
+        torch_dtype=torch.float16,
         attn_implementation="flash_attention_2"
         if is_flash_attn_2_available()
         else None,

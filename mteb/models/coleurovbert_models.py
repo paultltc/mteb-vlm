@@ -28,20 +28,23 @@ class ColEuroVBertWrapper(ColPaliEngineWrapper):
         requires_package(
             self, "colpali_engine", model_name, "pip install mteb[colpali_engine]"
         )
-        from colpali_engine.models import ColVBert, ColVBertProcessor
+        from colpali_engine.models import ColEuroVBert, ColEuroVBertProcessor
 
         super().__init__(
             model_name=model_name,
-            model_class=ColVBert,
-            processor_class=ColVBertProcessor,
+            model_class=ColEuroVBert,
+            processor_class=ColEuroVBertProcessor,
             revision=revision,
             device=device,
             **kwargs,
         )
 
+        if "torch_dtype" in kwargs:
+            self.mdl.to(kwargs["torch_dtype"])
+
 
 class BiEuroVBertWrapper(ColPaliEngineWrapper):
-    """Wrapper for BiVBert model."""
+    """Wrapper for BiEuroVBert model."""
 
     def __init__(
         self,
@@ -53,22 +56,25 @@ class BiEuroVBertWrapper(ColPaliEngineWrapper):
         requires_package(
             self, "colpali_engine", model_name, "pip install mteb[colpali_engine]"
         )
-        from colpali_engine.models import BiVBert, BiVBertProcessor
+        from colpali_engine.models import BiEuroVBert, BiEuroVBertProcessor
 
         super().__init__(
             model_name=model_name,
-            model_class=BiVBert,
-            processor_class=BiVBertProcessor,
+            model_class=BiEuroVBert,
+            processor_class=BiEuroVBertProcessor,
             revision=revision,
             device=device,
             **kwargs,
         )
 
+        if "torch_dtype" in kwargs:
+            self.mdl.to(kwargs["torch_dtype"])
+
 colvbert_eurobert_210 = ModelMeta(
     loader=partial(
         ColEuroVBertWrapper,
         model_name="SmolVEncoder/colvbert-eurobert_210-vidore",
-        torch_dtype=torch.float32,
+        torch_dtype=torch.float16,
         attn_implementation="flash_attention_2"
         if is_flash_attn_2_available()
         else None,
