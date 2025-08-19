@@ -39,6 +39,9 @@ class ColVLlamaWrapper(ColPaliEngineWrapper):
             **kwargs,
         )
 
+        if "torch_dtype" in kwargs:
+            self.mdl.to(kwargs["torch_dtype"])
+
 
 class BiVLlamaWrapper(ColPaliEngineWrapper):
     """Wrapper for BiVLlama model."""
@@ -63,6 +66,9 @@ class BiVLlamaWrapper(ColPaliEngineWrapper):
             device=device,
             **kwargs,
         )
+
+        if "torch_dtype" in kwargs:
+            self.mdl.to(kwargs["torch_dtype"])
 
 colvllama_sllm_210 = ModelMeta(
     loader=partial(

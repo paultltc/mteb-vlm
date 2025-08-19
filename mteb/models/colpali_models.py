@@ -47,6 +47,13 @@ class ColPaliEngineWrapper:
         )
         self.mdl.eval()
 
+        if torch.cuda.device_count() > 1:
+            logger.info(
+                f"Using {torch.cuda.device_count()} GPUs for inference. "
+                "Make sure to use the same device for the processor."
+            )
+            self.mdl = torch.nn.DataParallel(self.mdl)
+
         # Load processor
         self.processor = processor_class.from_pretrained(model_name)
 
