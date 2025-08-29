@@ -105,6 +105,7 @@ from mteb.models import (
     siglip2_models,
     colmodernvbert_models,
     coleurovbert_models,
+    moca_models
 )
 
 logger = logging.getLogger(__name__)
@@ -203,6 +204,7 @@ model_modules = [
     siglip2_models,
     colmodernvbert_models,
     coleurovbert_models,
+    moca_models
 ]
 MODEL_REGISTRY = {}
 

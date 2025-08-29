@@ -106,7 +106,7 @@ class Vidore2ESGReportsRetrieval(MultilingualTask, AbsTaskAny2AnyRetrieval):
         reference="https://arxiv.org/pdf/2407.01449",
         dataset={
             "path": "vidore/esg_reports_v2",
-            "revision": "0542c0d03da0ec1c8cbc517c8d78e7e95c75d3d3",
+            "revision": "87538b12b20b67a2b4326638921301f87f0cbaf0",
         },
         type="DocumentUnderstanding",
         category="t2i",
@@ -165,7 +165,7 @@ class Vidore2EconomicsReportsRetrieval(MultilingualTask, AbsTaskAny2AnyRetrieval
         reference="https://arxiv.org/pdf/2407.01449",
         dataset={
             "path": "vidore/economics_reports_v2",
-            "revision": "b3e3a04b07fbbaffe79be49dabf92f691fbca252",
+            "revision": "76fe40166ba07b1bf50457f5c6057cacdd045f10",
         },
         type="DocumentUnderstanding",
         category="t2i",
@@ -224,7 +224,7 @@ class Vidore2BioMedicalLecturesRetrieval(MultilingualTask, AbsTaskAny2AnyRetriev
         reference="https://arxiv.org/pdf/2407.01449",
         dataset={
             "path": "vidore/biomedical_lectures_v2",
-            "revision": "a29202f0da409034d651614d87cd8938d254e2ea",
+            "revision": "c4754665734e38742b191f0c28d504e8558d0462",
         },
         type="DocumentUnderstanding",
         category="t2i",
@@ -283,7 +283,7 @@ class Vidore2ESGReportsHLRetrieval(AbsTaskAny2AnyRetrieval):
         reference="https://arxiv.org/pdf/2407.01449",
         dataset={
             "path": "vidore/esg_reports_human_labeled_v2",
-            "revision": "6d467dedb09a75144ede1421747e47cf036857dd",
+            "revision": "5a338c329bf1608ac46ac2808060d44bcd92d521",
         },
         type="DocumentUnderstanding",
         category="t2i",

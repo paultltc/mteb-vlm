@@ -12,14 +12,8 @@ from mteb.encoder_interface import PromptType
 from mteb.model_meta import ModelMeta
 from mteb.requires_package import requires_image_dependencies
 
-
 def vista_loader(**kwargs):
-    try:  # a temporal fix for the dependency issues of vista models.
-        from visual_bge.modeling import Visualized_BGE
-    except ImportError:
-        raise ImportError(
-            "Please install `visual_bge`, refer to https://github.com/FlagOpen/FlagEmbedding/tree/master/research/visual_bge#install-flagembedding."
-        )
+    from .visual_bge.modeling import Visualized_BGE
 
     class VisualizedBGEWrapper(Visualized_BGE):
         """Setting up VISTA
@@ -138,6 +132,8 @@ def vista_loader(**kwargs):
             prompt_type: PromptType | None = None,
             **kwargs: Any,
         ):
+            import torchvision.transforms.functional as F
+
             if images is not None:
                 if isinstance(images, list):
                     if not tensors:
@@ -149,7 +145,7 @@ def vista_loader(**kwargs):
                         ]
                     else:
                         images = [
-                            self.preprocess_val(self.tensor_to_image(image))
+                            self.preprocess_val(F.to_pil_image(image.to("cpu")))
                             for image in images
                         ]
                     images = torch.stack(images)

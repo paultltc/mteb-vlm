@@ -77,7 +77,7 @@ class VidoreArxivQARetrieval(AbsTaskAny2AnyRetrieval):
         reference="https://arxiv.org/pdf/2407.01449",
         dataset={
             "path": "vidore/arxivqa_test_subsampled_beir",
-            "revision": "7d94d570960eac2408d3baa7a33f9de4822ae3e4",
+            "revision": "4abc1ddbb7247b6bb1447227923c0b9ebef5dd49",
         },
         type="DocumentUnderstanding",
         category="t2i",
@@ -133,7 +133,7 @@ class VidoreDocVQARetrieval(AbsTaskAny2AnyRetrieval):
         reference="https://arxiv.org/pdf/2407.01449",
         dataset={
             "path": "vidore/docvqa_test_subsampled_beir",
-            "revision": "162ba2fc1a8437eda8b6c37b240bc1c0f0deb092",
+            "revision": "b4f7c5806d1f300e239aa21f4bac118768db4d5e",
         },
         type="DocumentUnderstanding",
         category="t2i",
@@ -189,7 +189,7 @@ class VidoreInfoVQARetrieval(AbsTaskAny2AnyRetrieval):
         reference="https://arxiv.org/pdf/2407.01449",
         dataset={
             "path": "vidore/infovqa_test_subsampled_beir",
-            "revision": "b802cc5fd6c605df2d673a963667d74881d2c9a4",
+            "revision": "d83d5be7ff1ceaa340e6cd5d2d2c4129c707243c",
         },
         type="DocumentUnderstanding",
         category="t2i",
@@ -245,7 +245,7 @@ class VidoreTabfquadRetrieval(AbsTaskAny2AnyRetrieval):
         reference="https://arxiv.org/pdf/2407.01449",
         dataset={
             "path": "vidore/tabfquad_test_subsampled_beir",
-            "revision": "61a2224bcd29b7b261a4892ff4c8bea353527a31",
+            "revision": "c5877d59099ff47b7f57e5d0dc6ad61b583daa39",
         },
         type="DocumentUnderstanding",
         category="t2i",
@@ -301,7 +301,7 @@ class VidoreTatdqaRetrieval(AbsTaskAny2AnyRetrieval):
         reference="https://arxiv.org/pdf/2407.01449",
         dataset={
             "path": "vidore/tatdqa_test_beir",
-            "revision": "5feb5630fdff4d8d189ffedb2dba56862fdd45c0",
+            "revision": "c5929466ea37cdbf1774c86ba771fa58189ae5cc",
         },
         type="DocumentUnderstanding",
         category="t2i",
@@ -357,7 +357,7 @@ class VidoreShiftProjectRetrieval(AbsTaskAny2AnyRetrieval):
         reference="https://arxiv.org/pdf/2407.01449",
         dataset={
             "path": "vidore/shiftproject_test_beir",
-            "revision": "84a382e05c4473fed9cff2bbae95fe2379416117",
+            "revision": "dab283ac41a79c883d3ff01fe37bd82900e05816",
         },
         type="DocumentUnderstanding",
         category="t2i",
@@ -413,7 +413,7 @@ class VidoreSyntheticDocQAAIRetrieval(AbsTaskAny2AnyRetrieval):
         reference="https://arxiv.org/pdf/2407.01449",
         dataset={
             "path": "vidore/syntheticDocQA_artificial_intelligence_test_beir",
-            "revision": "2d9ebea5a1c6e9ef4a3b902a612f605dca11261c",
+            "revision": "ab559444f12dc0fb394f0bf77fd9629d5f35122b",
         },
         type="DocumentUnderstanding",
         category="t2i",
@@ -469,7 +469,7 @@ class VidoreSyntheticDocQAEnergyRetrieval(AbsTaskAny2AnyRetrieval):
         reference="https://arxiv.org/pdf/2407.01449",
         dataset={
             "path": "vidore/syntheticDocQA_energy_test_beir",
-            "revision": "9935aadbad5c8deec30910489db1b2c7133ae7a7",
+            "revision": "54349018df04bd27b72d0cff1970ff9d46aca200",
         },
         type="DocumentUnderstanding",
         category="t2i",
@@ -525,7 +525,7 @@ class VidoreSyntheticDocQAGovernmentReportsRetrieval(AbsTaskAny2AnyRetrieval):
         reference="https://arxiv.org/pdf/2407.01449",
         dataset={
             "path": "vidore/syntheticDocQA_government_reports_test_beir",
-            "revision": "b4909afa930f81282fd20601e860668073ad02aa",
+            "revision": "85d2c3e3425e97e169278b3943259a827f139c11",
         },
         type="DocumentUnderstanding",
         category="t2i",
@@ -581,7 +581,7 @@ class VidoreSyntheticDocQAHealthcareIndustryRetrieval(AbsTaskAny2AnyRetrieval):
         reference="https://arxiv.org/pdf/2407.01449",
         dataset={
             "path": "vidore/syntheticDocQA_healthcare_industry_test_beir",
-            "revision": "f9e25d5b6e13e1ad9f5c3cce202565031b3ab164",
+            "revision": "e787e3b7684f05400af9b50e5fb9ac89c70291a5",
         },
         type="DocumentUnderstanding",
         category="t2i",
