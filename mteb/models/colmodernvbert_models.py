@@ -70,31 +70,31 @@ class BiModernVBertWrapper(ColPaliEngineWrapper):
         if "torch_dtype" in kwargs:
             self.mdl.to(kwargs["torch_dtype"])
 
-colvbert_modernvbert_base = ModelMeta(
-    loader=partial(
-        ColModernVBertWrapper,
-        model_name="SmolVEncoder/colvbert-modernbert_base-vidore",
-        torch_dtype=torch.float16,
-        attn_implementation="flash_attention_2"
-        if is_flash_attn_2_available()
-        else None,
-    ),
-    name="SmolVEncoder/colvbert-modernbert_base-vidore",
-    languages=["eng-Latn"],
-    revision="c71ee9a431b74e87c138460f38be01248984d2f4",
-    release_date="2025-06-01",
-    modalities=["image", "text"],
-    n_parameters=252_000_000,
-    memory_usage_mb=480,
-    max_tokens=8192,
-    embed_dim=128,
-    license="apache-2.0",
-    open_weights=True,
-    public_training_code="https://github.com/illuin-tech/colpali",
-    public_training_data="https://huggingface.co/datasets/vidore/colpali_train_set",
-    framework=["ColPali"],
-    reference="https://huggingface.co/SmolVEncoder/colvbert-modernbert_base-vidore",
-    similarity_fn_name="max_sim",
-    use_instructions=True,
-    training_datasets=COLPALI_TRAINING_DATA,
-)
+# colvbert_modernvbert_base = ModelMeta(
+#     loader=partial(
+#         ColModernVBertWrapper,
+#         model_name="SmolVEncoder/colvbert-modernbert_base-vidore",
+#         torch_dtype=torch.float16,
+#         attn_implementation="flash_attention_2"
+#         if is_flash_attn_2_available()
+#         else None,
+#     ),
+#     name="SmolVEncoder/colvbert-modernbert_base-vidore",
+#     languages=["eng-Latn"],
+#     revision="c71ee9a431b74e87c138460f38be01248984d2f4",
+#     release_date="2025-06-01",
+#     modalities=["image", "text"],
+#     n_parameters=252_000_000,
+#     memory_usage_mb=480,
+#     max_tokens=8192,
+#     embed_dim=128,
+#     license="apache-2.0",
+#     open_weights=True,
+#     public_training_code="https://github.com/illuin-tech/colpali",
+#     public_training_data="https://huggingface.co/datasets/vidore/colpali_train_set",
+#     framework=["ColPali"],
+#     reference="https://huggingface.co/SmolVEncoder/colvbert-modernbert_base-vidore",
+#     similarity_fn_name="max_sim",
+#     use_instructions=True,
+#     training_datasets=COLPALI_TRAINING_DATA,
+# )
